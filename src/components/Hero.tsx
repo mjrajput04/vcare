@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden" style={{background: '#0071b9'}}>
+    <section className="relative h-[250px] sm:h-[300px] lg:h-[350px] overflow-hidden" style={{background: '#0071b9'}}>
       {/* Background with healthcare professionals image */}
       <motion.div 
         className="absolute right-0 top-0 w-full sm:w-[60%] lg:w-[55%] h-full overflow-hidden"
@@ -47,7 +47,7 @@ const Hero = () => {
             Caring for Your Health, Every Step of the Way
           </motion.p>
           <motion.h1 
-            className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-3 sm:mb-6 leading-tight"
+            className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 lg:mb-10 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -56,7 +56,7 @@ const Hero = () => {
           </motion.h1>
           
           <motion.h2 
-            className="text-sm sm:text-lg lg:text-xl text-white mb-3 sm:mb-4"
+            className="text-sm sm:text-lg lg:text-xl text-white mb-4 sm:mb-6 lg:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}

@@ -7,7 +7,7 @@ const HealthPlansSection = () => {
     {
       title: "Basic Plan",
       price: "Rs. 1,199/-",
-      image: "/image.png"
+      image: "/image-2.png"
     },
     {
       title: "Full Body Check up",

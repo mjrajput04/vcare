@@ -17,44 +17,13 @@ const AboutSection = () => {
           viewport={{ once: true }}
         >
           <motion.img
-            src={medicalCenterExterior}
+            src="/image-6.png"
             alt="Vcare Multispecialty Hospital exterior"
             className="w-full rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           />
-          
-          {/* Key Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Card className="medical-card p-3 sm:p-4 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <CardContent className="p-0">
-                  <Building className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-2" />
-                  <div className="text-xl sm:text-2xl font-bold text-primary">400</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground">Inpatient Beds</div>
-                </CardContent>
-              </Card>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <Card className="medical-card p-3 sm:p-4 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <CardContent className="p-0">
-                  <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-2" />
-                  <div className="text-xl sm:text-2xl font-bold text-primary">40,000+</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground">ER Patients/Year</div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+
         </motion.div>
 
         {/* Right Column - Content */}
@@ -114,58 +83,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4" style={{color: '#0071b9'}}>
-              Why Choose Vcare Multispecialty Hospital?
-            </h3>
-            <p className="text-foreground mb-4">
-              When patients and their families choose our hospital, they access:
-            </p>
-            
-            <div className="space-y-3">
-              {[
-                { icon: Award, text: "Award-winning medical care and patient-centered excellence" },
-                { icon: Heart, text: "24/7 emergency services with advanced trauma care" },
-                { icon: Building, text: "Modern facilities with cutting-edge medical technology" },
-                { icon: Users, text: "Highly qualified medical professionals and nursing staff" }
-              ].map((item, index) => (
-                <motion.div 
-                  key={index} 
-                  className="flex items-center space-x-3 transition-all duration-300 hover:translate-x-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm sm:text-base text-foreground">{item.text}</span>
-                </motion.div>
-              ))}
-            </div>
 
-            <motion.div 
-              className="mt-6 flex flex-wrap gap-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
-              viewport={{ once: true }}
-            >
-              <Badge variant="secondary" className="bg-accent/10 text-accent-foreground transition-all duration-300 hover:scale-105 text-xs sm:text-sm">
-                Advanced Trauma Care
-              </Badge>
-              <Badge variant="secondary" className="bg-accent/10 text-accent-foreground transition-all duration-300 hover:scale-105 text-xs sm:text-sm">
-                Multispecialty Excellence
-              </Badge>
-              <Badge variant="secondary" className="bg-accent/10 text-accent-foreground transition-all duration-300 hover:scale-105 text-xs sm:text-sm">
-                Patient-Centered Care
-              </Badge>
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
